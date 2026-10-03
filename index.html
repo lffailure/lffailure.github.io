@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,15 +12,20 @@
       - host videos here (not on a personal YouTube channel) and strip file metadata
       - keep "noindex" so the page is not picked up by search engines
   -->
-  <meta name="title" content="Learning from Failure: Training on Failed Rollouts with Stitched Expert Recovery for Articulated Object Opening">
-  <meta name="description" content="Failure-triggered data aggregation that stitches expert recovery onto failed policy rollouts, raising articulated object opening success from 22.3% to 34.2%.">
-  <meta name="keywords" content="imitation learning, articulated object manipulation, failure recovery, data aggregation, 3D diffusion policy, vision-language model">
+  <meta name="title"
+    content="Learning from Failure: Training on Failed Rollouts with Stitched Expert Recovery for Articulated Object Opening">
+  <meta name="description"
+    content="Failure-triggered data aggregation that stitches expert recovery onto failed policy rollouts, raising articulated object opening success from 22.3% to 34.2%.">
+  <meta name="keywords"
+    content="imitation learning, articulated object manipulation, failure recovery, data aggregation, 3D diffusion policy, vision-language model">
   <meta name="robots" content="noindex, nofollow">
   <meta name="language" content="English">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Learning from Failure: Training on Failed Rollouts with Stitched Expert Recovery for Articulated Object Opening">
-  <meta property="og:description" content="Failure-triggered data aggregation that stitches expert recovery onto failed policy rollouts, raising articulated object opening success from 22.3% to 34.2%.">
+  <meta property="og:title"
+    content="Learning from Failure: Training on Failed Rollouts with Stitched Expert Recovery for Articulated Object Opening">
+  <meta property="og:description"
+    content="Failure-triggered data aggregation that stitches expert recovery onto failed policy rollouts, raising articulated object opening success from 22.3% to 34.2%.">
   <meta property="og:url" content="https://lffailure.github.io/">
 
   <meta name="theme-color" content="#2563eb">
@@ -34,9 +40,11 @@
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -63,6 +71,7 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 </head>
+
 <body>
 
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
@@ -70,449 +79,615 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Learning from Failure: Training on Failed Rollouts with Stitched Expert Recovery for Articulated Object Opening</h1>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Anonymous Authors</span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Under review at ICRA 2027</span>
-              <span class="eql-cntrb"><small><br>This page is anonymized for double-blind review.</small></span>
-            </div>
-
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- Paper PDF: keep disabled until it is safe to share an anonymized copy -->
-                <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark" disabled>
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper (coming soon)</span>
-                  </a>
-                </span>
+              <h1 class="title is-1 publication-title">Learning from Failure: Training on Failed Rollouts with Stitched
+                Expert Recovery for Articulated Object Opening</h1>
 
-                <span class="link-block">
-                  <a href="#video" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-video"></i></span>
-                    <span>Video</span>
-                  </a>
-                </span>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Anonymous Authors</span>
+              </div>
 
-                <!-- TODO: Use an anonymized mirror (e.g. https://anonymous.4open.science), not a personal GitHub repo -->
-                <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark" disabled>
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Code (coming soon)</span>
-                  </a>
-                </span>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Under review at ICRA 2027</span>
+                <span class="eql-cntrb"><small><br>This page is anonymized for double-blind review.</small></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Paper PDF: keep disabled until it is safe to share an anonymized copy -->
+                  <span class="link-block">
+                    <a class="external-link button is-normal is-rounded is-dark" disabled>
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper (coming soon)</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#video" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-video"></i></span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+
+                  <!-- TODO: Use an anonymized mirror (e.g. https://anonymous.4open.science), not a personal GitHub repo -->
+                  <span class="link-block">
+                    <a class="external-link button is-normal is-rounded is-dark" disabled>
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code (coming soon)</span>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- Teaser (Fig. 1) -->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
+    <!-- Teaser (Fig. 1) -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <figure class="media-slot">
+            <!-- <img src="static/images/teaser.png" alt="Stitching expert continuations onto failed policy rollouts, and the resulting improvement in mean success rate" onerror="mediaMissing(this)"> -->
+            <img src="static/images/fig1.jpg"
+              alt="Stitching expert continuations onto failed policy rollouts, and the resulting improvement in mean success rate"
+              onerror="mediaMissing(this)">
+          </figure>
+          <h2 class="subtitle has-text-centered">
+            <strong>Stitching expert continuations onto failed policy rollouts.</strong>
+            We use failed rollouts to select where expert supervision is queried, and stitch the resulting expert
+            continuation to the preceding policy context.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Imitation learning has produced visuomotor policies that handle an increasingly broad range of
+                manipulation tasks.
+                They are typically trained on successful trajectories, which show how to complete the task but reveal
+                less about how to act once execution leaves that distribution.
+                This gap is costly in articulated object manipulation, where small grasping or control errors compound
+                under sustained contact and kinematic constraints.
+                We present a failure-triggered data aggregation framework that turns failed policy rollouts into
+                stitched recovery trajectories.
+                For each failed rollout, we re-execute the heuristic expert from a failure point selected by a
+                vision-language model and stitch its continuation onto the policy prefix.
+                Expert supervision is thus requested only at failures, once per episode, and entirely offline.
+                Across 18 articulated objects under held-out configurations, this improves average task success from
+                22.3% to 34.2%.
+                The gain depends on keeping the failure prefix: the expert continuation alone recovers little of it, and
+                it persists when the trajectory count is held fixed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Key numbers -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="stat-grid">
+          <div class="stat-tile">
+            <div class="stat-value">22.3% &rarr; 34.2%</div>
+            <div class="stat-label">Average success on held-out configurations</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-value">18 / 18</div>
+            <div class="stat-label">Objects improved, revolute and prismatic</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-value">1 query</div>
+            <div class="stat-label">Expert query per failed episode, entirely offline</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Method (Fig. 2, Fig. 3) -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+
         <figure class="media-slot">
-          <img src="static/images/teaser.png" alt="Stitching expert continuations onto failed policy rollouts, and the resulting improvement in mean success rate" onerror="mediaMissing(this)">
+          <img src="static/images/fig2.jpg" alt="Failure-triggered data aggregation pipeline" loading="lazy"
+            onerror="mediaMissing(this)">
+          <figcaption class="figure-caption">
+            <strong>Failure-triggered data aggregation pipeline.</strong>
+            An initial DP3 policy trained on expert demonstrations is rolled out in simulation. Successful trajectories
+            are retained as D<sub>S</sub>.
+            For each failed rollout, a VLM selects a cut point, the configuration recorded there is restored, and the
+            heuristic expert generates a continuation offline.
+            We stitch the policy failure prefix with this expert continuation to construct D<sub>FR</sub>, which is
+            aggregated with D<sub>B</sub> and D<sub>S</sub> for retraining.
+          </figcaption>
         </figure>
-        <h2 class="subtitle has-text-centered">
-          <strong>Stitching expert continuations onto failed policy rollouts.</strong>
-          We use failed rollouts to select where expert supervision is queried, and stitch the resulting expert continuation to the preceding policy context.
-        </h2>
-      </div>
-    </div>
-  </section>
 
+        <div class="content">
+          <ol class="method-steps">
+            <li>
+              <strong>Train a baseline policy.</strong>
+              A 3D Diffusion Policy (DP3) &pi;<sub>0</sub> is trained on successful demonstrations D<sub>B</sub> from a
+              heuristic expert that reads privileged simulator state (object mesh and joint axis).
+            </li>
+            <li>
+              <strong>Collect rollouts and split by outcome.</strong>
+              &pi;<sub>0</sub> is rolled out without intervention. Successful rollouts are kept directly as
+              D<sub>S</sub>; failed rollouts D<sub>F</sub> become the source of recovery supervision.
+            </li>
+            <li>
+              <strong>Select a cut point with a VLM.</strong>
+              25 frames of each failed rollout are arranged into a 5&times;5 contact sheet, and Qwen2-VL picks the frame
+              where the failure begins.
+              The VLM produces no robot actions and is not used at test time.
+            </li>
+            <li>
+              <strong>Re-execute the expert and stitch.</strong>
+              The robot and object configuration at the cut point is restored, the same heuristic expert is re-executed,
+              and its continuation is stitched onto the policy prefix.
+              Failed continuations and trajectories with large end-effector discontinuities are discarded.
+            </li>
+            <li>
+              <strong>Retrain.</strong>
+              A new policy is trained from scratch on D<sub>B</sub> &cup; D<sub>S</sub> &cup; D<sub>FR</sub>, with the
+              optimizer-step budget matched to the baseline (~72k steps).
+            </li>
+          </ol>
 
-  <!-- Abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Imitation learning has produced visuomotor policies that handle an increasingly broad range of manipulation tasks.
-              They are typically trained on successful trajectories, which show how to complete the task but reveal less about how to act once execution leaves that distribution.
-              This gap is costly in articulated object manipulation, where small grasping or control errors compound under sustained contact and kinematic constraints.
-              We present a failure-triggered data aggregation framework that turns failed policy rollouts into stitched recovery trajectories.
-              For each failed rollout, we re-execute the heuristic expert from a failure point selected by a vision-language model and stitch its continuation onto the policy prefix.
-              Expert supervision is thus requested only at failures, once per episode, and entirely offline.
-              Across 18 articulated objects under held-out configurations, this improves average task success from 22.3% to 34.2%.
-              The gain depends on keeping the failure prefix: the expert continuation alone recovers little of it, and it persists when the trajectory count is held fixed.
-            </p>
+          <div class="columns">
+            <div class="column">
+              <h3 class="title is-5">Recovery-only (R)</h3>
+              <p>&tau;<sup>R</sup> = &rho;<sub>c</sub><br>The expert continuation alone; the policy execution that led
+                to the cut point is discarded.</p>
+            </div>
+            <div class="column">
+              <h3 class="title is-5">Failure-recovery (FR, ours)</h3>
+              <p>&tau;<sup>FR</sup> = &tau;<sup>&pi;</sup><sub>0:c</sub> &oplus; &rho;<sub>c</sub><br>The policy prefix
+                is kept as executed, with no relabeling, masking, failure indicator, or recovery-specific loss.</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  <!-- Key numbers -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="stat-grid">
-        <div class="stat-tile">
-          <div class="stat-value">22.3% &rarr; 34.2%</div>
-          <div class="stat-label">Average success on held-out configurations</div>
-        </div>
-        <div class="stat-tile">
-          <div class="stat-value">18 / 18</div>
-          <div class="stat-label">Objects improved, revolute and prismatic</div>
-        </div>
-        <div class="stat-tile">
-          <div class="stat-value">1 query</div>
-          <div class="stat-label">Expert query per failed episode, entirely offline</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Method (Fig. 2, Fig. 3) -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Method</h2>
-
-      <figure class="media-slot">
-        <img src="static/images/pipeline.png" alt="Failure-triggered data aggregation pipeline" loading="lazy" onerror="mediaMissing(this)">
-        <figcaption class="figure-caption">
-          <strong>Failure-triggered data aggregation pipeline.</strong>
-          An initial DP3 policy trained on expert demonstrations is rolled out in simulation. Successful trajectories are retained as D<sub>S</sub>.
-          For each failed rollout, a VLM selects a cut point, the configuration recorded there is restored, and the heuristic expert generates a continuation offline.
-          We stitch the policy failure prefix with this expert continuation to construct D<sub>FR</sub>, which is aggregated with D<sub>B</sub> and D<sub>S</sub> for retraining.
-        </figcaption>
-      </figure>
-
-      <div class="content">
-        <ol class="method-steps">
-          <li>
-            <strong>Train a baseline policy.</strong>
-            A 3D Diffusion Policy (DP3) &pi;<sub>0</sub> is trained on successful demonstrations D<sub>B</sub> from a heuristic expert that reads privileged simulator state (object mesh and joint axis).
-          </li>
-          <li>
-            <strong>Collect rollouts and split by outcome.</strong>
-            &pi;<sub>0</sub> is rolled out without intervention. Successful rollouts are kept directly as D<sub>S</sub>; failed rollouts D<sub>F</sub> become the source of recovery supervision.
-          </li>
-          <li>
-            <strong>Select a cut point with a VLM.</strong>
-            25 frames of each failed rollout are arranged into a 5&times;5 contact sheet, and Qwen2-VL picks the frame where the failure begins.
-            The VLM produces no robot actions and is not used at test time.
-          </li>
-          <li>
-            <strong>Re-execute the expert and stitch.</strong>
-            The robot and object configuration at the cut point is restored, the same heuristic expert is re-executed, and its continuation is stitched onto the policy prefix.
-            Failed continuations and trajectories with large end-effector discontinuities are discarded.
-          </li>
-          <li>
-            <strong>Retrain.</strong>
-            A new policy is trained from scratch on D<sub>B</sub> &cup; D<sub>S</sub> &cup; D<sub>FR</sub>, with the optimizer-step budget matched to the baseline (~72k steps).
-          </li>
-        </ol>
-
-        <div class="columns">
-          <div class="column">
-            <h3 class="title is-5">Recovery-only (R)</h3>
-            <p>&tau;<sup>R</sup> = &rho;<sub>c</sub><br>The expert continuation alone; the policy execution that led to the cut point is discarded.</p>
-          </div>
-          <div class="column">
-            <h3 class="title is-5">Failure-recovery (FR, ours)</h3>
-            <p>&tau;<sup>FR</sup> = &tau;<sup>&pi;</sup><sub>0:c</sub> &oplus; &rho;<sub>c</sub><br>The policy prefix is kept as executed, with no relabeling, masking, failure indicator, or recovery-specific loss.</p>
-          </div>
-        </div>
-
-        <h3 class="title is-5">Cut point selection prompt (abbreviated)</h3>
-        <pre class="prompt-block">1: Contact sheet of 25 frames from a robot-arm rollout in CHRONOLOGICAL order, each labeled 0..24.
+          <h3 class="title is-5">Cut point selection prompt (abbreviated)</h3>
+          <pre class="prompt-block">1: Contact sheet of 25 frames from a robot-arm rollout in CHRONOLOGICAL order, each labeled 0..24.
    Task: pull the cabinet door OPEN.
 2: This attempt DEFINITELY FAILED. Do NOT judge success/failure --- assume it failed.
 3: Pick the SINGLE frame number where the failure BEGINS. This includes any of: the gripper misses /
    slips off the handle; the door is pushed the WRONG way (closing); OR the point where the door STOPS
    opening ...
 4: Answer STRICT JSON: {"failure_start_frame": &lt;0..24&gt;, "reason": "..."}</pre>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Failure-recovery data (Fig. 4 + videos) -->
-  <section class="section hero">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Generated Failure-Recovery Data</h2>
-      <div class="content has-text-centered">
-        <p>
-          Each trajectory runs a failed rollout of the baseline policy up to the VLM-selected cut point, followed by the heuristic expert re-executed from the restored configuration.
-          The failures differ in kind, but the same expert completes the manipulation in each case.
-        </p>
-      </div>
-
-      <div class="columns is-multiline" data-media-group>
-        <div class="column is-half media-slot">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/fr/fr_miss_handle.mp4" type="video/mp4" onerror="mediaMissing(this)">
-          </video>
-          <p class="has-text-centered">Gripper misses the handle</p>
-        </div>
-        <div class="column is-half media-slot">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/fr/fr_push_closed.mp4" type="video/mp4" onerror="mediaMissing(this)">
-          </video>
-          <p class="has-text-centered">Pushes the joint closed instead of opening it</p>
-        </div>
-        <div class="column is-half media-slot">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/fr/fr_lose_contact.mp4" type="video/mp4" onerror="mediaMissing(this)">
-          </video>
-          <p class="has-text-centered">Loses contact after initial engagement</p>
-        </div>
-        <div class="column is-half media-slot">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/fr/fr_collision.mp4" type="video/mp4" onerror="mediaMissing(this)">
-          </video>
-          <p class="has-text-centered">Collides with the object</p>
         </div>
       </div>
-
-      <figure class="media-slot">
-        <img src="static/images/fr_examples.png" alt="Examples of generated failure-recovery training data" loading="lazy" onerror="mediaMissing(this)">
-        <figcaption class="figure-caption">
-          <strong>Examples of generated failure-recovery training data.</strong>
-          Each row is one D<sub>FR</sub> trajectory: policy failure prefix up to the VLM cut <em>c</em>, expert continuation from the restored configuration, and successful completion.
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- Results -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Results</h2>
-      <div class="content">
-        <p>
-          We evaluate on 18 PartNet-Mobility objects with revolute and prismatic joints in PyBullet.
-          Demonstrations and evaluation use disjoint sets of randomized configurations (object pose and scale, robot initialization, initial articulation state), so all numbers measure generalization to held-out configurations.
-          Every condition is trained with 3 seeds and evaluated on 50 rollouts per object; we report mean &plusmn; std over seeds.
-        </p>
-
-        <h3 class="title is-4">Improvement across objects</h3>
-        <p>
-          The full method B+S+FR improves average success from 22.3% to 34.2% (+11.9 pp) and improves on all 18 objects.
-          Since all added data comes from the data-collection configurations, the gain reflects generalization to the held-out set.
-        </p>
-      </div>
-
-      <figure class="media-slot">
-        <img src="static/images/table_per_object.png" alt="Per-object success rate of the expert-only baseline and the full method" loading="lazy" onerror="mediaMissing(this)">
-        <figcaption class="figure-caption">Per-object success rate (%). Each entry averages three training seeds &times; 50 rollouts.</figcaption>
-      </figure>
-
-      <div class="columns is-variable is-6 results-tables">
-        <div class="column">
-          <h3 class="title is-5">Contribution of each data source</h3>
-          <div class="table-container">
-            <table class="table is-narrow is-fullwidth results-table">
-              <thead>
-                <tr><th>B</th><th>S</th><th>FR</th><th>Avg. SR (%)</th><th>&Delta; vs. B</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>&check;</td><td>&cross;</td><td>&cross;</td><td>22.3 &plusmn; 1.5</td><td>&ndash;</td></tr>
-                <tr><td>&check;</td><td>&check;</td><td>&cross;</td><td>32.0 &plusmn; 0.3</td><td>+9.7</td></tr>
-                <tr><td>&check;</td><td>&cross;</td><td>&check;</td><td>29.4 &plusmn; 1.5</td><td>+7.1</td></tr>
-                <tr class="is-ours"><td>&check;</td><td>&check;</td><td>&check;</td><td><strong>34.2 &plusmn; 0.9</strong></td><td><strong>+11.9</strong></td></tr>
-                <tr><td>&cross;</td><td>&check;</td><td>&cross;</td><td>22.3 &plusmn; 0.4</td><td>+0.0</td></tr>
-                <tr><td>&cross;</td><td>&check;</td><td>&check;</td><td>21.4 &plusmn; 0.4</td><td>&minus;0.9</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            Successful rollouts and failure-recovery data each help on their own and are strongest combined.
-            Without expert demonstrations, neither source helps.
-          </p>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-5">Effect of the failure prefix</h3>
-          <div class="table-container">
-            <table class="table is-narrow is-fullwidth results-table">
-              <thead>
-                <tr><th>Failure prefix</th><th>Recovery data</th><th>Avg. SR (%)</th><th>&Delta; vs. B+S</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>&cross;</td><td>&cross;</td><td>32.0 &plusmn; 0.3</td><td>&ndash;</td></tr>
-                <tr><td>&cross;</td><td>&check;</td><td>32.7 &plusmn; 0.4</td><td>+0.7</td></tr>
-                <tr class="is-ours"><td>&check;</td><td>&check;</td><td><strong>34.2 &plusmn; 0.9</strong></td><td><strong>+2.2</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            All conditions include D<sub>B</sub> and D<sub>S</sub>. Recovery-only data gains about as much as the seed variation;
-            keeping the prefix is what makes the difference.
-          </p>
-        </div>
-      </div>
-
-      <div class="columns is-variable is-6 results-tables">
-        <div class="column">
-          <h3 class="title is-5">Fixed trajectory budget</h3>
-          <div class="table-container">
-            <table class="table is-narrow is-fullwidth results-table">
-              <thead>
-                <tr><th>#B</th><th>#S</th><th>#FR</th><th>Avg. SR (%)</th><th>&Delta; vs. 100B</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>100</td><td>0</td><td>0</td><td>21.8 &plusmn; 1.4</td><td>&ndash;</td></tr>
-                <tr><td>90</td><td>10</td><td>0</td><td>25.9 &plusmn; 1.3</td><td>+4.1</td></tr>
-                <tr><td>90</td><td>0</td><td>10</td><td>25.3 &plusmn; 0.6</td><td>+3.5</td></tr>
-                <tr class="is-ours"><td>80</td><td>10</td><td>10</td><td><strong>27.6 &plusmn; 0.6</strong></td><td><strong>+5.8</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            Every condition has exactly 100 trajectories (13 objects with at least 10 FR trajectories).
-            The gain is not explained by collecting more trajectories.
-          </p>
-        </div>
-
-        <div class="column">
-          <h3 class="title is-5">Failure-recovery coverage</h3>
-          <div class="table-container">
-            <table class="table is-narrow is-fullwidth results-table">
-              <thead>
-                <tr><th>#B</th><th>#S</th><th>#FR</th><th>Avg. SR (%)</th><th>&Delta; vs. 0%</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>100</td><td>67</td><td>0 (0%)</td><td>32.0 &plusmn; 0.3</td><td>&ndash;</td></tr>
-                <tr><td>100</td><td>67</td><td>4 (25%)</td><td>32.3 &plusmn; 0.8</td><td>+0.3</td></tr>
-                <tr><td>100</td><td>67</td><td>8 (50%)</td><td>33.7 &plusmn; 0.5</td><td>+1.7</td></tr>
-                <tr class="is-ours"><td>100</td><td>67</td><td>17 (100%)</td><td><strong>34.2 &plusmn; 0.9</strong></td><td><strong>+2.2</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            Performance grows with the amount of FR data once enough of it is available.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Qualitative comparison (Fig. 5 + videos) -->
-  <section class="section hero">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Qualitative Comparison</h2>
-      <div class="content has-text-centered">
-        <p>
-          Rollouts of the expert-only baseline B and the policy trained with B+S+FR from the same initial state on held-out configurations.
-        </p>
-      </div>
-
-      <div data-media-group>
-        <h3 class="title is-5 has-text-centered">Misaligns the grasp</h3>
-        <div class="columns">
-          <div class="column media-slot">
-            <video controls muted loop playsinline width="100%" preload="metadata">
-              <source src="static/videos/comparison/grasp_baseline.mp4" type="video/mp4" onerror="mediaMissing(this)">
-            </video>
-            <p class="has-text-centered">B (expert only)</p>
-          </div>
-          <div class="column media-slot">
-            <video controls muted loop playsinline width="100%" preload="metadata">
-              <source src="static/videos/comparison/grasp_ours.mp4" type="video/mp4" onerror="mediaMissing(this)">
-            </video>
-            <p class="has-text-centered"><strong>B+S+FR (ours)</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div data-media-group>
-        <h3 class="title is-5 has-text-centered">Collision and stuck</h3>
-        <div class="columns">
-          <div class="column media-slot">
-            <video controls muted loop playsinline width="100%" preload="metadata">
-              <source src="static/videos/comparison/collision_baseline.mp4" type="video/mp4" onerror="mediaMissing(this)">
-            </video>
-            <p class="has-text-centered">B (expert only)</p>
-          </div>
-          <div class="column media-slot">
-            <video controls muted loop playsinline width="100%" preload="metadata">
-              <source src="static/videos/comparison/collision_ours.mp4" type="video/mp4" onerror="mediaMissing(this)">
-            </video>
-            <p class="has-text-centered"><strong>B+S+FR (ours)</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <figure class="media-slot">
-        <img src="static/images/qualitative.png" alt="Qualitative comparison of policy rollouts on held-out configurations" loading="lazy" onerror="mediaMissing(this)">
-        <figcaption class="figure-caption">
-          <strong>Qualitative comparison of policy rollouts on held-out configurations.</strong>
-          The baseline exhibits unstable contact or grasp misalignment, resulting in failed articulation, whereas the policy trained with failure-recovery data maintains more reliable object interaction and completes the task.
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-
-  <!-- Supplementary video (self-hosted: a YouTube channel can reveal the authors) -->
-  <section class="hero is-small is-light" id="video" data-media-group>
-    <div class="hero-body">
+    <!-- Failure-recovery data (Fig. 4 + videos) -->
+    <section class="section hero">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Supplementary Video</h2>
-        <div class="media-slot">
-          <video controls playsinline width="100%" preload="metadata">
-            <source src="static/videos/supplementary.mp4" type="video/mp4" onerror="mediaMissing(this)">
-          </video>
+        <h2 class="title is-3 has-text-centered">Generated Failure-Recovery Data</h2>
+        <div class="content has-text-centered">
+          <p>
+            Each trajectory runs a failed rollout of the baseline policy up to the VLM-selected cut point, followed by
+            the heuristic expert re-executed from the restored configuration.
+            The failures differ in kind, but the same expert completes the manipulation in each case.
+          </p>
+        </div>
+
+        <div class="columns is-multiline" data-media-group>
+          <div class="column is-half media-slot">
+            <video controls muted loop playsinline width="100%" preload="metadata">
+              <source src="static/videos/fr/fr_miss_handle.mp4" type="video/mp4" onerror="mediaMissing(this)">
+            </video>
+            <p class="has-text-centered">Gripper misses the handle</p>
+          </div>
+          <div class="column is-half media-slot">
+            <video controls muted loop playsinline width="100%" preload="metadata">
+              <source src="static/videos/fr/fr_push_closed.mp4" type="video/mp4" onerror="mediaMissing(this)">
+            </video>
+            <p class="has-text-centered">Pushes the joint closed instead of opening it</p>
+          </div>
+          <div class="column is-half media-slot">
+            <video controls muted loop playsinline width="100%" preload="metadata">
+              <source src="static/videos/fr/fr_lose_contact.mp4" type="video/mp4" onerror="mediaMissing(this)">
+            </video>
+            <p class="has-text-centered">Loses contact after initial engagement</p>
+          </div>
+          <div class="column is-half media-slot">
+            <video controls muted loop playsinline width="100%" preload="metadata">
+              <source src="static/videos/fr/fr_collision.mp4" type="video/mp4" onerror="mediaMissing(this)">
+            </video>
+            <p class="has-text-centered">Collides with the object</p>
+          </div>
+        </div>
+
+        <figure class="media-slot">
+          <!-- <img src="static/images/fr_examples.png" alt="Examples of generated failure-recovery training data" -->
+          <img src="static/images/fig3.jpg" alt="Examples of generated failure-recovery training data" loading="lazy"
+            onerror="mediaMissing(this)">
+          <figcaption class="figure-caption">
+            <strong>Examples of generated failure-recovery training data.</strong>
+            Each row is one D<sub>FR</sub> trajectory: policy failure prefix up to the VLM cut <em>c</em>, expert
+            continuation from the restored configuration, and successful completion.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- Results -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div class="content">
+          <p>
+            We evaluate on 18 PartNet-Mobility objects with revolute and prismatic joints in PyBullet.
+            Demonstrations and evaluation use disjoint sets of randomized configurations (object pose and scale, robot
+            initialization, initial articulation state), so all numbers measure generalization to held-out
+            configurations.
+            Every condition is trained with 3 seeds and evaluated on 50 rollouts per object; we report mean &plusmn; std
+            over seeds.
+          </p>
+
+          <h3 class="title is-4">Improvement across objects</h3>
+          <p>
+            The full method B+S+FR improves average success from 22.3% to 34.2% (+11.9 pp) and improves on all 18
+            objects.
+            Since all added data comes from the data-collection configurations, the gain reflects generalization to the
+            held-out set.
+          </p>
+        </div>
+
+        <figure class="media-slot">
+          <img src="static/images/table1.png"
+            alt="Per-object success rate of the expert-only baseline and the full method" loading="lazy"
+            onerror="mediaMissing(this)">
+          <figcaption class="figure-caption">Per-object success rate (%). Each entry averages three training seeds
+            &times; 50 rollouts.</figcaption>
+        </figure>
+
+        <div class="columns is-variable is-6 results-tables">
+          <div class="column">
+            <h3 class="title is-5">Contribution of each data source</h3>
+            <div class="table-container">
+              <table class="table is-narrow is-fullwidth results-table">
+                <thead>
+                  <tr>
+                    <th>B</th>
+                    <th>S</th>
+                    <th>FR</th>
+                    <th>Avg. SR (%)</th>
+                    <th>&Delta; vs. B</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&check;</td>
+                    <td>&cross;</td>
+                    <td>&cross;</td>
+                    <td>22.3 &plusmn; 1.5</td>
+                    <td>&ndash;</td>
+                  </tr>
+                  <tr>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td>&cross;</td>
+                    <td>32.0 &plusmn; 0.3</td>
+                    <td>+9.7</td>
+                  </tr>
+                  <tr>
+                    <td>&check;</td>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                    <td>29.4 &plusmn; 1.5</td>
+                    <td>+7.1</td>
+                  </tr>
+                  <tr class="is-ours">
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td><strong>34.2 &plusmn; 0.9</strong></td>
+                    <td><strong>+11.9</strong></td>
+                  </tr>
+                  <tr>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                    <td>&cross;</td>
+                    <td>22.3 &plusmn; 0.4</td>
+                    <td>+0.0</td>
+                  </tr>
+                  <tr>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td>21.4 &plusmn; 0.4</td>
+                    <td>&minus;0.9</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              Successful rollouts and failure-recovery data each help on their own and are strongest combined.
+              Without expert demonstrations, neither source helps.
+            </p>
+          </div>
+
+          <div class="column">
+            <h3 class="title is-5">Effect of the failure prefix</h3>
+            <div class="table-container">
+              <table class="table is-narrow is-fullwidth results-table">
+                <thead>
+                  <tr>
+                    <th>Failure prefix</th>
+                    <th>Recovery data</th>
+                    <th>Avg. SR (%)</th>
+                    <th>&Delta; vs. B+S</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&cross;</td>
+                    <td>&cross;</td>
+                    <td>32.0 &plusmn; 0.3</td>
+                    <td>&ndash;</td>
+                  </tr>
+                  <tr>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                    <td>32.7 &plusmn; 0.4</td>
+                    <td>+0.7</td>
+                  </tr>
+                  <tr class="is-ours">
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td><strong>34.2 &plusmn; 0.9</strong></td>
+                    <td><strong>+2.2</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              All conditions include D<sub>B</sub> and D<sub>S</sub>. Recovery-only data gains about as much as the seed
+              variation;
+              keeping the prefix is what makes the difference.
+            </p>
+          </div>
+        </div>
+
+        <div class="columns is-variable is-6 results-tables">
+          <div class="column">
+            <h3 class="title is-5">Fixed trajectory budget</h3>
+            <div class="table-container">
+              <table class="table is-narrow is-fullwidth results-table">
+                <thead>
+                  <tr>
+                    <th>#B</th>
+                    <th>#S</th>
+                    <th>#FR</th>
+                    <th>Avg. SR (%)</th>
+                    <th>&Delta; vs. 100B</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>100</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>21.8 &plusmn; 1.4</td>
+                    <td>&ndash;</td>
+                  </tr>
+                  <tr>
+                    <td>90</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>25.9 &plusmn; 1.3</td>
+                    <td>+4.1</td>
+                  </tr>
+                  <tr>
+                    <td>90</td>
+                    <td>0</td>
+                    <td>10</td>
+                    <td>25.3 &plusmn; 0.6</td>
+                    <td>+3.5</td>
+                  </tr>
+                  <tr class="is-ours">
+                    <td>80</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td><strong>27.6 &plusmn; 0.6</strong></td>
+                    <td><strong>+5.8</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              Every condition has exactly 100 trajectories (13 objects with at least 10 FR trajectories).
+              The gain is not explained by collecting more trajectories.
+            </p>
+          </div>
+
+          <div class="column">
+            <h3 class="title is-5">Failure-recovery coverage</h3>
+            <div class="table-container">
+              <table class="table is-narrow is-fullwidth results-table">
+                <thead>
+                  <tr>
+                    <th>#B</th>
+                    <th>#S</th>
+                    <th>#FR</th>
+                    <th>Avg. SR (%)</th>
+                    <th>&Delta; vs. 0%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>100</td>
+                    <td>67</td>
+                    <td>0 (0%)</td>
+                    <td>32.0 &plusmn; 0.3</td>
+                    <td>&ndash;</td>
+                  </tr>
+                  <tr>
+                    <td>100</td>
+                    <td>67</td>
+                    <td>4 (25%)</td>
+                    <td>32.3 &plusmn; 0.8</td>
+                    <td>+0.3</td>
+                  </tr>
+                  <tr>
+                    <td>100</td>
+                    <td>67</td>
+                    <td>8 (50%)</td>
+                    <td>33.7 &plusmn; 0.5</td>
+                    <td>+1.7</td>
+                  </tr>
+                  <tr class="is-ours">
+                    <td>100</td>
+                    <td>67</td>
+                    <td>17 (100%)</td>
+                    <td><strong>34.2 &plusmn; 0.9</strong></td>
+                    <td><strong>+2.2</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              Performance grows with the amount of FR data once enough of it is available.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- Limitations -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Limitations</h2>
-      <div class="content has-text-justified">
-        <p>
-          Our evaluation is limited to simulation, and the data-generation pipeline is tied to it: recovery generation restores a recorded simulator state, and the heuristic expert reads geometry and joint parameters a physical system cannot access.
-          These requirements apply only to data generation. The trained policy acts from point clouds and proprioception, so it can run on a real robot without the simulator.
-          Evaluating that transfer on real articulated objects is our immediate next step, while extending the generation pipeline itself to hardware remains a harder problem.
-        </p>
+    <!-- Qualitative comparison (Fig. 5 + videos) -->
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Qualitative Comparison</h2>
+        <div class="content has-text-centered">
+          <p>
+            Rollouts of the expert-only baseline B and the policy trained with B+S+FR from the same initial state on
+            held-out configurations.
+          </p>
+        </div>
+
+        <div data-media-group>
+          <h3 class="title is-5 has-text-centered">Misaligns the grasp</h3>
+          <div class="columns">
+            <div class="column media-slot">
+              <video controls muted loop playsinline width="100%" preload="metadata">
+                <source src="static/videos/comparison/grasp_baseline.mp4" type="video/mp4" onerror="mediaMissing(this)">
+              </video>
+              <p class="has-text-centered">B (expert only)</p>
+            </div>
+            <div class="column media-slot">
+              <video controls muted loop playsinline width="100%" preload="metadata">
+                <source src="static/videos/comparison/grasp_ours.mp4" type="video/mp4" onerror="mediaMissing(this)">
+              </video>
+              <p class="has-text-centered"><strong>B+S+FR (ours)</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div data-media-group>
+          <h3 class="title is-5 has-text-centered">Collision and stuck</h3>
+          <div class="columns">
+            <div class="column media-slot">
+              <video controls muted loop playsinline width="100%" preload="metadata">
+                <source src="static/videos/comparison/collision_baseline.mp4" type="video/mp4"
+                  onerror="mediaMissing(this)">
+              </video>
+              <p class="has-text-centered">B (expert only)</p>
+            </div>
+            <div class="column media-slot">
+              <video controls muted loop playsinline width="100%" preload="metadata">
+                <source src="static/videos/comparison/collision_ours.mp4" type="video/mp4" onerror="mediaMissing(this)">
+              </video>
+              <p class="has-text-centered"><strong>B+S+FR (ours)</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="media-slot">
+          <img src="static/images/fig4.jpg" alt="Qualitative comparison of policy rollouts on held-out configurations"
+            loading="lazy" onerror="mediaMissing(this)">
+          <figcaption class="figure-caption">
+            <strong>Qualitative comparison of policy rollouts on held-out configurations.</strong>
+            The baseline exhibits unstable contact or grasp misalignment, resulting in failed articulation, whereas the
+            policy trained with failure-recovery data maintains more reliable object interaction and completes the task.
+          </figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- BibTeX -->
-  <section class="section hero is-light" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
+    <!-- Supplementary video (self-hosted: a YouTube channel can reveal the authors) -->
+    <section class="hero is-small is-light" id="video" data-media-group>
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Supplementary Video</h2>
+          <div class="media-slot">
+            <video controls playsinline width="100%" preload="metadata">
+              <source src="static/videos/supplementary.mp4" type="video/mp4" onerror="mediaMissing(this)">
+            </video>
+          </div>
+        </div>
       </div>
-      <pre id="bibtex-code"><code>@inproceedings{anonymous2027lffailure,
+    </section>
+
+
+    <!-- Limitations -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Limitations</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our evaluation is limited to simulation, and the data-generation pipeline is tied to it: recovery generation
+            restores a recorded simulator state, and the heuristic expert reads geometry and joint parameters a physical
+            system cannot access.
+            These requirements apply only to data generation. The trained policy acts from point clouds and
+            proprioception, so it can run on a real robot without the simulator.
+            Evaluating that transfer on real articulated objects is our immediate next step, while extending the
+            generation pipeline itself to hardware remains a harder problem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BibTeX -->
+    <section class="section hero is-light" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@inproceedings{anonymous2027lffailure,
   title={Learning from Failure: Training on Failed Rollouts with Stitched Expert Recovery for Articulated Object Opening},
   author={Anonymous},
   booktitle={Under review at IEEE International Conference on Robotics and Automation (ICRA)},
   year={2027}
 }</code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
   </main>
 
 
@@ -522,9 +697,13 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
           </div>
         </div>
@@ -533,4 +712,5 @@
   </footer>
 
 </body>
+
 </html>
