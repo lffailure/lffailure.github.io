@@ -4,21 +4,36 @@ Project page for an anonymous ICRA 2027 submission: https://lffailure.github.io/
 
 ## Media files
 
-Put these files in place. `index.html` already points to them.
+Drop files at these paths; `index.html` already points to them. A slot whose file is missing is hidden automatically, so the page can go live before every file exists.
 
-| Path | Content |
-|---|---|
-| `static/videos/teaser.mp4` | Teaser shown under the title |
-| `static/images/method_overview.png` | Pipeline figure |
-| `static/videos/sim_1.mp4` … `sim_3.mp4` | Simulation rollouts |
-| `static/videos/baseline_fail.mp4`, `ours_recover.mp4` | Side-by-side failure case |
-| `static/videos/real_1.mp4`, `real_2.mp4` | Real-robot rollouts |
-| `static/videos/supplementary.mp4` | Full supplementary video |
+```
+static/
+├── images/
+│   ├── teaser.png             Fig. 1  (under the title)
+│   ├── pipeline.png           Fig. 2  (Method)
+│   ├── fr_examples.png        Fig. 4  (Generated Failure-Recovery Data)
+│   ├── table_per_object.png   Table I (Results, with object thumbnails)
+│   └── qualitative.png        Fig. 5  (Qualitative Comparison)
+└── videos/
+    ├── fr/                    stitched FR trajectories, one per failure type
+    │   ├── fr_miss_handle.mp4
+    │   ├── fr_push_closed.mp4
+    │   ├── fr_lose_contact.mp4
+    │   └── fr_collision.mp4
+    ├── comparison/            same initial state, baseline vs. ours
+    │   ├── grasp_baseline.mp4
+    │   ├── grasp_ours.mp4
+    │   ├── collision_baseline.mp4
+    │   └── collision_ours.mp4
+    └── supplementary.mp4      full video
+```
 
-Compress videos before committing; GitHub rejects files over 100 MB:
+Images: PNG, about 2000 px wide. Export figures from the source files rather than screenshotting the PDF.
+
+Videos: H.264 MP4, no audio, metadata stripped. GitHub rejects files over 100 MB; keep clips under ~10 MB:
 
 ```bash
-ffmpeg -i in.mp4 -vcodec libx264 -crf 28 -preset slow -an -map_metadata -1 out.mp4
+ffmpeg -i in.mp4 -vcodec libx264 -crf 28 -preset slow -pix_fmt yuv420p -vf "scale=1280:-2" -an -map_metadata -1 -movflags +faststart out.mp4
 ```
 
 ## Double-blind checklist (until the decision)

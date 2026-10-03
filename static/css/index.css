@@ -751,3 +751,103 @@ a:focus {
 
 
 
+
+/* ---------- Project page additions ---------- */
+
+/* Media slots whose file has not been uploaded yet */
+.is-missing {
+  display: none !important;
+}
+
+figure.media-slot {
+  margin: 1.5rem 0;
+}
+
+figure.media-slot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.figure-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: justify;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-tile {
+  padding: 1.25rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--background-primary);
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.method-steps li {
+  margin-bottom: 0.5rem;
+}
+
+/* .hero is a flex column; without this a wide <pre> stretches the container past the viewport */
+.hero > .container {
+  min-width: 0;
+  width: 100%;
+}
+
+.content pre.prompt-block {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border-radius: var(--border-radius);
+}
+
+.results-tables {
+  margin-top: 1.5rem;
+}
+
+.results-table {
+  background: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+.results-table th,
+.results-table td {
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+.results-table tr.is-ours {
+  background: rgb(37 99 235 / 0.08);
+}
+
+.table-note {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
